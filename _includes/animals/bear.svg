@@ -1,0 +1,88 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cute Bear - Redesigned -->
+  <defs>
+    <linearGradient id="bearBrown" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a08070"/>
+      <stop offset="100%" style="stop-color:#806050"/>
+    </linearGradient>
+    <linearGradient id="bearLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c8b8a8"/>
+      <stop offset="100%" style="stop-color:#b0a090"/>
+    </linearGradient>
+    <linearGradient id="bearMuzzle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8d8c8"/>
+      <stop offset="100%" style="stop-color:#d8c8b8"/>
+    </linearGradient>
+    <filter id="bearBlush" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
+    </filter>
+    <filter id="bearShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#00000020"/>
+    </filter>
+  </defs>
+
+  <!-- Body -->
+  <ellipse cx="100" cy="160" rx="55" ry="38" fill="url(#bearBrown)" filter="url(#bearShadow)"/>
+
+  <!-- Belly -->
+  <ellipse cx="100" cy="165" rx="38" ry="28" fill="url(#bearLight)"/>
+
+  <!-- Arms/Paws -->
+  <ellipse cx="48" cy="150" rx="22" ry="28" fill="url(#bearBrown)"/>
+  <ellipse cx="152" cy="150" rx="22" ry="28" fill="url(#bearBrown)"/>
+  <!-- Paw pads -->
+  <ellipse cx="45" cy="165" rx="12" ry="10" fill="url(#bearMuzzle)"/>
+  <ellipse cx="155" cy="165" rx="12" ry="10" fill="url(#bearMuzzle)"/>
+  <circle cx="40" cy="160" r="4" fill="#c8a898"/>
+  <circle cx="50" cy="158" r="4" fill="#c8a898"/>
+  <circle cx="150" cy="158" r="4" fill="#c8a898"/>
+  <circle cx="160" cy="160" r="4" fill="#c8a898"/>
+
+  <!-- Feet -->
+  <ellipse cx="70" cy="192" rx="22" ry="12" fill="url(#bearBrown)"/>
+  <ellipse cx="130" cy="192" rx="22" ry="12" fill="url(#bearBrown)"/>
+  <ellipse cx="70" cy="194" rx="14" ry="8" fill="url(#bearMuzzle)"/>
+  <ellipse cx="130" cy="194" rx="14" ry="8" fill="url(#bearMuzzle)"/>
+
+  <!-- Ears - properly connected -->
+  <circle cx="45" cy="50" r="25" fill="url(#bearBrown)"/>
+  <circle cx="155" cy="50" r="25" fill="url(#bearBrown)"/>
+  <!-- Inner ears -->
+  <circle cx="45" cy="50" r="15" fill="url(#bearLight)"/>
+  <circle cx="155" cy="50" r="15" fill="url(#bearLight)"/>
+
+  <!-- Head -->
+  <circle cx="100" cy="85" r="60" fill="url(#bearBrown)" filter="url(#bearShadow)"/>
+
+  <!-- Muzzle -->
+  <ellipse cx="100" cy="110" rx="35" ry="28" fill="url(#bearMuzzle)"/>
+
+  <!-- Cheek Blush -->
+  <ellipse cx="48" cy="100" rx="18" ry="14" fill="#e8a090" filter="url(#bearBlush)" opacity="0.5"/>
+  <ellipse cx="152" cy="100" rx="18" ry="14" fill="#e8a090" filter="url(#bearBlush)" opacity="0.5"/>
+
+  <!-- Eyes -->
+  <ellipse cx="70" cy="80" rx="14" ry="16" fill="#2d2926"/>
+  <ellipse cx="130" cy="80" rx="14" ry="16" fill="#2d2926"/>
+  <!-- Eye Highlights -->
+  <ellipse cx="75" cy="75" rx="6" ry="7" fill="#fff"/>
+  <ellipse cx="135" cy="75" rx="6" ry="7" fill="#fff"/>
+  <circle cx="67" cy="85" r="3" fill="#fff" opacity="0.4"/>
+  <circle cx="127" cy="85" r="3" fill="#fff" opacity="0.4"/>
+
+  <!-- Eyebrows - friendly curved -->
+  <path d="M52 60 Q70 50 85 62" stroke="#6a5545" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M115 62 Q130 50 148 60" stroke="#6a5545" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Nose -->
+  <ellipse cx="100" cy="108" rx="14" ry="11" fill="#4a3a30"/>
+  <ellipse cx="100" cy="105" rx="6" ry="4" fill="#6a5a50" opacity="0.6"/>
+
+  <!-- Mouth -->
+  <path d="M100 119 L100 128" stroke="#4a3a30" stroke-width="3" stroke-linecap="round"/>
+  <path d="M82 134 Q100 148 118 134" stroke="#4a3a30" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Forehead tuft -->
+  <path d="M85 35 Q100 25 115 35" stroke="#907060" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M90 42 Q100 34 110 42" stroke="#907060" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

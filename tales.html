@@ -1,0 +1,58 @@
+---
+layout: default
+title: All Tales
+permalink: /tales/
+---
+
+<section class="tales-page">
+  <header class="page-header" data-animate>
+    <h1 class="page-title">{{ site.data.translations.tales.page_title }}</h1>
+    <p class="page-subtitle">{{ site.data.translations.tales.page_subtitle }}</p>
+  </header>
+
+  <div class="tales-filter" data-animate>
+    <button class="filter-btn active" data-filter="all">{{ site.data.translations.tales.filter_all }}</button>
+    {% assign categories = site.tales | map: "category" | uniq %}
+    {% for category in categories %}
+      {% if category %}
+      <button class="filter-btn" data-filter="{{ category | slugify }}">{{ category }}</button>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="tales-grid tales-grid-full" data-animate>
+    {% for tale in site.tales %}
+      <article class="tale-card" data-category="{{ tale.category | slugify }}">
+        <a href="{{ tale.url | relative_url }}" class="tale-card-link">
+          <div class="tale-card-image">
+            {% if tale.image %}
+            <div class="tale-illustration" style="background-image: url('{{ tale.image | relative_url }}')"></div>
+            {% else %}
+            <div class="tale-illustration tale-illustration-default">
+              <span class="tale-icon">{{ tale.icon | default: "&#9733;" }}</span>
+            </div>
+            {% endif %}
+          </div>
+          <div class="tale-card-content">
+            <h3 class="tale-card-title">{{ tale.title }}</h3>
+            <p class="tale-card-excerpt">{{ tale.excerpt | strip_html | truncatewords: 25 }}</p>
+            <div class="tale-card-meta">
+              <span class="reading-time">{{ tale.reading_time | default: site.data.translations.meta.default_reading_time }}</span>
+              {% if tale.age_range %}
+              <span class="age-range">{{ site.data.translations.tales.age_range_prefix }} {{ tale.age_range }}</span>
+              {% endif %}
+            </div>
+          </div>
+        </a>
+      </article>
+    {% endfor %}
+  </div>
+
+  {% if site.tales.size == 0 %}
+  <div class="empty-state" data-animate>
+    <span class="empty-icon">&#10022;</span>
+    <p>{{ site.data.translations.tales.empty_state_message }}</p>
+    <p class="empty-hint">{{ site.data.translations.tales.empty_state_hint }}</p>
+  </div>
+  {% endif %}
+</section>

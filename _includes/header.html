@@ -1,0 +1,13 @@
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="{{ '/' | relative_url }}" class="logo">
+      <span class="logo-icon">&#10022;</span>
+      <span class="logo-text">{{ site.data.translations.site.title }}</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="{{ '/' | relative_url }}">{{ site.data.translations.nav.home }}</a></li>
+      <li><a href="{{ '/tales/' | relative_url }}">{{ site.data.translations.nav.all_tales }}</a></li>
+      <li><a href="{{ '/about/' | relative_url }}">{{ site.data.translations.nav.about }}</a></li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,174 @@
+@use "variables" as *;
+
+// Tale Cards
+
+.tales-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: $space-lg;
+  margin-top: $space-lg;
+}
+
+.tales-grid-full {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.tale-card {
+  background: white;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: $shadow-soft;
+  transition: transform $transition-base, box-shadow $transition-base;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-card;
+
+    .tale-illustration {
+      transform: scale(1.05);
+    }
+
+    .tale-card-title {
+      color: $color-accent-dark;
+    }
+
+    .tale-icon {
+      animation: pulse 1s ease infinite;
+    }
+  }
+}
+
+.tale-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.tale-card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background: linear-gradient(135deg, $color-bg-alt, $color-moon);
+}
+
+.tale-illustration {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform $transition-slow;
+}
+
+.tale-illustration-default {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8f5f0, #ebe4d8);
+}
+
+.tale-icon {
+  font-size: 4rem;
+  color: $color-gold;
+  opacity: 0.8;
+  transition: transform $transition-base;
+}
+
+.tale-card-content {
+  padding: $space-md;
+}
+
+.tale-card-title {
+  font-family: $font-display;
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: $space-xs;
+  transition: color $transition-fast;
+}
+
+.tale-card-excerpt {
+  font-size: 0.95rem;
+  color: $color-text-light;
+  line-height: 1.6;
+  margin-bottom: $space-sm;
+}
+
+.tale-card-meta {
+  display: flex;
+  gap: $space-md;
+  font-size: 0.85rem;
+  color: $color-text-muted;
+
+  .reading-time,
+  .age-range {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    &::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: $color-accent-light;
+      border-radius: 50%;
+    }
+  }
+
+  .reading-time::before {
+    display: none;
+  }
+}
+
+// Featured Tales Section
+.featured-tales {
+  padding: $space-xl 0;
+}
+
+.section-title {
+  font-family: $font-display;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  text-align: center;
+  margin-bottom: $space-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-md;
+
+  .title-decoration {
+    color: $color-gold;
+    font-size: 1rem;
+    animation: twinkle 3s ease infinite;
+
+    &:last-child {
+      animation-delay: 1.5s;
+    }
+  }
+}
+
+.section-cta {
+  text-align: center;
+  margin-top: $space-xl;
+}
+
+.view-all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-xs;
+  font-weight: 500;
+  color: $color-accent-dark;
+  padding: $space-xs $space-sm;
+  border-radius: $radius-full;
+  transition: all $transition-fast;
+
+  &:hover {
+    color: $color-accent;
+    background: rgba($color-accent, 0.1);
+
+    .link-arrow {
+      transform: translateX(4px);
+    }
+  }
+
+  .link-arrow {
+    transition: transform $transition-fast;
+  }
+}

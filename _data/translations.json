@@ -1,0 +1,67 @@
+{
+  "site": {
+    "title": "Ayqulaq",
+    "description": "Balalar ushın sıyqırlı ertekler hám ápsanalar dúnyasına sayahat",
+    "tagline": "Ertekler janlanǵan orın"
+  },
+  "nav": {
+    "home": "Bas bet",
+    "all_tales": "Ertekler",
+    "about": "Biz haqqında"
+  },
+  "hero": {
+    "title_line1": "Bir bar eken,",
+    "title_line2": "bir joq eken...",
+    "cta_button": "Erteklerdi oqıw"
+  },
+  "home": {
+    "featured_section_title": "Qızıqlı ertekler",
+    "view_all_stories": "Barlıq erteklerdi kóriw",
+    "about_section_title": "Tańqalarlı dúnya",
+    "about_section_text": "Batır qaharmanlar, sheksiz dúniya hám qızıqlı sayahatlar menen dúniyanı tanıp, jaqsılıqqa hám aq kewil bolıwǵa úyrenemiz.",
+    "learn_more": "Biz haqqında kóbirek bilіw"
+  },
+  "tales": {
+    "page_title": "Barlıq ertekler",
+    "page_subtitle": "Ashılıwdı kútіp turǵan sıyqırlı ertekler",
+    "filter_all": "Barlıǵı",
+    "empty_state_message": "Jańa ertekler jazılmaqta...",
+    "empty_state_hint": "Kóp uzamay ertekler álemine qaytıń!",
+    "reading_time_suffix": "minut oqıw",
+    "age_range_prefix": "Jas"
+  },
+  "tale": {
+    "the_end": "Sońı",
+    "moral_title": "Juwmaq",
+    "nav_previous": "Aldınǵı ertek",
+    "nav_next": "Keyingi ertek",
+    "nav_all_tales": "Barlıq ertekler"
+  },
+  "about": {
+    "page_title": "Ayqulaq haqqında",
+    "intro": "*Ayqulaq* — nur hám suw tamshılarınan payda bolatuǵın reńli yarım ay taqlettegi atmosferalıq qubılıs.",
+    "mission_title": "Bizіń maqsetіmіz",
+    "mission_text": "Biz hár bir balanıń júregin quwanıshqa toltıratuǵın erteklerdi bólisiwge háreket etemiz. Erteklerdi hár kúni perzentlerińiz uyqıǵa ketiwden aldın, dawıslap oqıp beriń.",
+    "magic_title": "Erteklerdiń sıyqırı",
+    "magic_list": [
+      { "bold": "Batırlıqqa ruхlandırаdı", "text": "ertektegi waqıyalar arqalı" },
+      { "bold": "Mehribanlıqqa úyretedi", "text": "súyikli qaharamanına taqlet qılıw arqalı" },
+      { "bold": "Oy órisin keńeytedi", "text": "shegarasız álem menen" },
+      { "bold": "Baylanıslar jaratаdı", "text": "jas hám ülken oqıwshılar arasında" }
+    ],
+    "educators_title": "Ata-analar hám ustazlar ushın",
+    "educators_text": "Barlıq erteklerіmіz jasqa say hám paydalı bolıwı ushın itibarlı jazılǵan. Hár bir ertekte:",
+    "educators_list": [
+      "Usınılǵan jas aralıǵı",
+      "Oqıw waqtı",
+      "Kategoriyalar"
+    ],
+    "closing": "Hár bir ertek jaqsılıq ushın."
+  },
+  "footer": {
+    "copyright_prefix": ""
+  },
+  "meta": {
+    "default_reading_time": "5 minut oqıw"
+  }
+}

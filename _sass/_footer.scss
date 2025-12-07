@@ -1,0 +1,44 @@
+@use "variables" as *;
+
+// Footer
+
+.site-footer {
+  background: $color-bg-alt;
+  border-top: 1px solid $color-border;
+  padding: $space-xl $space-md;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.footer-stars {
+  margin-bottom: $space-md;
+
+  .star {
+    display: inline-block;
+    font-size: 1.25rem;
+    color: $color-gold;
+    margin: 0 $space-sm;
+    animation: twinkle 3s ease infinite;
+
+    &.star-1 { animation-delay: 0s; }
+    &.star-2 { animation-delay: 1s; }
+    &.star-3 { animation-delay: 2s; }
+  }
+}
+
+.footer-text {
+  font-family: $font-display;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: $color-text-light;
+  margin-bottom: $space-xs;
+}
+
+.footer-copyright {
+  font-size: 0.85rem;
+  color: $color-text-muted;
+}

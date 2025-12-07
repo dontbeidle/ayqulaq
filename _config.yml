@@ -1,0 +1,38 @@
+title: "Ayqulaq"
+description: "A magical collection of fairy tales and stories for children"
+url: "https://ayqulaq.uz"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /tales/:title/
+
+# Collections
+collections:
+  tales:
+    output: true
+    permalink: /tales/:title/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "tales"
+    values:
+      layout: "tale"
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CLAUDE.md
+
+# Translation data shortcut
+t: translations

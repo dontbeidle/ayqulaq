@@ -1,0 +1,195 @@
+@use "variables" as *;
+
+// Page Styles
+
+// Page header
+.page-header {
+  text-align: center;
+  margin-bottom: $space-xl;
+  padding-bottom: $space-lg;
+  border-bottom: 1px solid $color-border;
+}
+
+.page-title {
+  font-family: $font-display;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: $space-sm;
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  color: $color-text-light;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+// Tales page
+.tales-page {
+  padding: $space-lg 0;
+}
+
+.tales-filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: $space-sm;
+  margin-bottom: $space-lg;
+}
+
+.filter-btn {
+  padding: $space-xs $space-md;
+  background: transparent;
+  border: 1px solid $color-border;
+  border-radius: $radius-full;
+  font-family: $font-body;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: $color-text-light;
+  cursor: pointer;
+  transition: all $transition-fast;
+
+  &:hover {
+    border-color: $color-accent;
+    color: $color-accent;
+  }
+
+  &.active {
+    background: $color-accent;
+    border-color: $color-accent;
+    color: white;
+  }
+}
+
+// Empty state
+.empty-state {
+  text-align: center;
+  padding: $space-2xl $space-md;
+  color: $color-text-muted;
+
+  .empty-icon {
+    display: block;
+    font-size: 3rem;
+    color: $color-accent-light;
+    margin-bottom: $space-md;
+    animation: pulse 2s ease infinite;
+  }
+
+  p {
+    font-family: $font-display;
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-bottom: $space-xs;
+  }
+
+  .empty-hint {
+    font-family: $font-body;
+    font-size: 0.95rem;
+    font-style: normal;
+  }
+}
+
+// About page
+.about-page {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: $space-lg 0;
+}
+
+.about-body {
+  font-family: $font-display;
+  font-size: 1.15rem;
+  line-height: 1.8;
+
+  h2 {
+    margin-top: $space-xl;
+    margin-bottom: $space-md;
+    font-size: 1.75rem;
+  }
+
+  ul, ol {
+    margin: $space-md 0;
+    padding-left: $space-lg;
+
+    li {
+      margin-bottom: $space-sm;
+
+      strong {
+        color: $color-accent-dark;
+      }
+    }
+  }
+
+  hr {
+    border: none;
+    margin: $space-xl 0;
+    text-align: center;
+
+    &::before {
+      content: '✦ ✦ ✦';
+      color: $color-accent-light;
+      letter-spacing: $space-sm;
+    }
+  }
+}
+
+.about-closing {
+  text-align: center;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: $color-text-light;
+  margin-top: $space-xl;
+
+  .closing-star {
+    color: $color-gold;
+    margin: 0 $space-sm;
+  }
+}
+
+// About preview on homepage
+.about-preview {
+  padding: $space-2xl 0;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-content {
+  padding: $space-xl;
+  background: $color-bg-alt;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-soft;
+}
+
+.about-title {
+  font-family: $font-display;
+  font-size: 1.75rem;
+  margin-bottom: $space-md;
+}
+
+.about-text {
+  font-size: 1.05rem;
+  color: $color-text-light;
+  line-height: 1.7;
+  margin-bottom: $space-md;
+}
+
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-xs;
+  font-weight: 500;
+  color: $color-accent-dark;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $color-accent;
+
+    .link-arrow {
+      transform: translateX(4px);
+    }
+  }
+
+  .link-arrow {
+    transition: transform $transition-fast;
+  }
+}

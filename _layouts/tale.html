@@ -1,0 +1,119 @@
+---
+layout: default
+---
+
+<article class="tale-single">
+  <header class="tale-header" data-animate>
+    <div class="tale-header-decoration">
+      <span class="header-star">&#10022;</span>
+      <span class="header-star">&#10023;</span>
+      <span class="header-star">&#10022;</span>
+    </div>
+
+    <h1 class="tale-title">{{ page.title }}</h1>
+
+    {% if page.subtitle %}
+    <p class="tale-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+
+    <div class="tale-meta">
+      {% if page.reading_time %}
+      <span class="meta-item">
+        <span class="meta-icon">&#9202;</span>
+        {{ page.reading_time }}
+      </span>
+      {% endif %}
+      {% if page.age_range %}
+      <span class="meta-item">
+        <span class="meta-icon">&#9733;</span>
+        {{ site.data.translations.tales.age_range_prefix }} {{ page.age_range }}
+      </span>
+      {% endif %}
+      {% if page.category %}
+      <span class="meta-item">
+        <span class="meta-icon">&#10022;</span>
+        {{ page.category }}
+      </span>
+      {% endif %}
+    </div>
+  </header>
+
+  {% if page.image %}
+  <figure class="tale-hero-image" data-animate>
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+  </figure>
+  {% else %}
+  <div class="tale-hero-decoration" data-animate>
+    <div class="decoration-circle">
+      <span class="decoration-icon">{{ page.icon | default: "&#9733;" }}</span>
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="tale-content" data-animate>
+    <div class="tale-opening">
+      <span class="opening-flourish">&#10087;</span>
+    </div>
+
+    {{ content }}
+
+    <div class="tale-ending">
+      <span class="ending-flourish">&#10038;</span>
+      <p class="the-end">{{ site.data.translations.tale.the_end }}</p>
+      <span class="ending-flourish">&#10038;</span>
+    </div>
+  </div>
+
+  {% if page.moral %}
+  <aside class="tale-moral" data-animate>
+    <h3 class="moral-title">
+      <span class="moral-star">&#10022;</span>
+      {{ site.data.translations.tale.moral_title }}
+      <span class="moral-star">&#10022;</span>
+    </h3>
+    <p class="moral-text">{{ page.moral }}</p>
+  </aside>
+  {% endif %}
+
+  <nav class="tale-navigation" data-animate>
+    {% assign tales = site.tales | sort: "date" %}
+    {% assign tale_index = 0 %}
+    {% for tale in tales %}
+      {% if tale.url == page.url %}
+        {% assign tale_index = forloop.index0 %}
+      {% endif %}
+    {% endfor %}
+
+    {% assign prev_index = tale_index | minus: 1 %}
+    {% assign next_index = tale_index | plus: 1 %}
+
+    <div class="nav-links">
+      {% if prev_index >= 0 %}
+        {% assign prev_tale = tales[prev_index] %}
+        <a href="{{ prev_tale.url | relative_url }}" class="nav-link nav-prev">
+          <span class="nav-arrow">&larr;</span>
+          <span class="nav-label">{{ site.data.translations.tale.nav_previous }}</span>
+          <span class="nav-title">{{ prev_tale.title }}</span>
+        </a>
+      {% else %}
+        <div class="nav-link nav-placeholder"></div>
+      {% endif %}
+
+      <a href="{{ '/tales/' | relative_url }}" class="nav-link nav-all">
+        <span class="nav-icon">&#10022;</span>
+        <span class="nav-label">{{ site.data.translations.tale.nav_all_tales }}</span>
+      </a>
+
+      {% if next_index < tales.size %}
+        {% assign next_tale = tales[next_index] %}
+        <a href="{{ next_tale.url | relative_url }}" class="nav-link nav-next">
+          <span class="nav-label">{{ site.data.translations.tale.nav_next }}</span>
+          <span class="nav-title">{{ next_tale.title }}</span>
+          <span class="nav-arrow">&rarr;</span>
+        </a>
+      {% else %}
+        <div class="nav-link nav-placeholder"></div>
+      {% endif %}
+    </div>
+  </nav>
+</article>

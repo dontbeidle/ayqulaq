@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+<section class="hero" data-animate>
+  <div class="hero-animals">
+    <div class="hero-animal animal-bear">
+      {% include animals/bear.svg %}
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <h1 class="hero-title">
+      <span class="title-line">{{ site.data.translations.hero.title_line1 }}</span>
+      <span class="title-line">{{ site.data.translations.hero.title_line2 }}</span>
+    </h1>
+    <p class="hero-subtitle">{{ site.data.translations.site.description }}</p>
+    <a href="{{ '/tales/' | relative_url }}" class="hero-cta">
+      <span>{{ site.data.translations.hero.cta_button }}</span>
+      <span class="cta-arrow">&rarr;</span>
+    </a>
+  </div>
+
+  <div class="hero-decoration">
+    <div class="moon"></div>
+    <div class="stars-cluster">
+      <span class="twinkle-star" style="--delay: 0s;">&#10022;</span>
+      <span class="twinkle-star" style="--delay: 0.5s;">&#10023;</span>
+      <span class="twinkle-star" style="--delay: 1s;">&#10022;</span>
+      <span class="twinkle-star" style="--delay: 1.5s;">&#10023;</span>
+      <span class="twinkle-star" style="--delay: 2s;">&#10022;</span>
+    </div>
+  </div>
+</section>
+
+<section class="featured-tales" data-animate>
+  <h2 class="section-title">
+    <span class="title-decoration">&#10022;</span>
+    {{ site.data.translations.home.featured_section_title }}
+    <span class="title-decoration">&#10022;</span>
+  </h2>
+
+  <div class="tales-grid">
+    {% assign featured_tales = site.tales | where: "featured", true | limit: 3 %}
+    {% if featured_tales.size == 0 %}
+      {% assign featured_tales = site.tales | limit: 3 %}
+    {% endif %}
+
+    {% for tale in featured_tales %}
+      {% include tale-card.html tale=tale %}
+    {% endfor %}
+  </div>
+
+  <div class="section-cta">
+    <a href="{{ '/tales/' | relative_url }}" class="view-all-link">
+      {{ site.data.translations.home.view_all_stories }}
+      <span class="link-arrow">&rarr;</span>
+    </a>
+  </div>
+</section>
+
+<section class="about-preview" data-animate>
+  <div class="about-content">
+    <h2 class="about-title">{{ site.data.translations.home.about_section_title }}</h2>
+    <p class="about-text">{{ site.data.translations.home.about_section_text }}</p>
+    <a href="{{ '/about/' | relative_url }}" class="about-link">
+      {{ site.data.translations.home.learn_more }}
+      <span class="link-arrow">&rarr;</span>
+    </a>
+  </div>
+</section>
+
+{{ content }}
