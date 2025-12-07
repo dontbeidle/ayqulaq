@@ -3,7 +3,7 @@ title: "Tabılmas doslıq"
 subtitle: "Jaqsı dos, is túskende biliner"
 icon: "&#9789;"
 category: "Doslıq"
-reading_time: "4 min read"
+reading_time: "4 min"
 age_range: "4-8"
 featured: true
 moral: "Dostıńa kerek gezde mudamı járdem beriw kerek. Hesh qashan dostıńa qılǵan jaqsılıǵıń jerde qalmaydı!"

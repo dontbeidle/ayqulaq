@@ -1,9 +1,9 @@
 ---
 title: "Hákim-Ulıqpan"
 subtitle: "Xalıqına is kórsetken márt ólmeydi, tarıyxqa jazıp ketken xat ólmeydi."
-icon: "&#9789;"
-category: "Doslıq"
-reading_time: "4 min read"
+icon: "🕮"
+category: "Bilim"
+reading_time: "6 min"
 age_range: "4-8"
 featured: true
 moral: "Bilim de, bilimli adam da mudamı qádirli."
@@ -18,6 +18,8 @@ Sonda patsha:
 — Haw, aǵa, nege qıyınlaw boladı? - depti.
 
 — Ol adamdı sizden burınǵı patsha, jerdiń astında kómip, ústin jer etip jiberip edi. Sonı tawıp alıw qıyındaǵı, - deydi.
+
+---
 
 Patsha erteńine barlıq xalqın jıynap, Hákim-Ulıqpandı izlewdi tapsıradı. Onı izlep júrse, bir jerden kishkene oyıq tabıladı. Sonı keńeytip qarasa, Hákim-Ulıqpan zindanda jatır eken. Jańaǵı bilgish adam tesikke basın tıǵıp: "Ulıqpan" depti. Hesh ses shıqpaptı. Úshke deyin baqırıptı, hesh ses esitilmepti. Sonnan soń: "Ulıqpan qorıqpay-aq qoy. Saǵan ǵazap qılǵan patsha óldi. Onnan beri biraz jıl ótti. Ornına basqa adam patsha boldı. Jańadan bolǵan patshanıń tamaǵına súyek ketip, seni tawıp alıw ushın xalqın jinap izlep atır." dep qattı baqırıptı. Sol waqıtta zindannan: "Janım bar, tirimen, biraq hálsizben. Olay bolsa, patshamızǵa aytıp barıń, bizdi shıǵarıp alsın", - degen saza esitildi. Patsha bul xabardı esitkennen keyin Hákim-Ulıqpandı dárhal shıǵarıp aldırtadı. Hákim-Ulıqpan bes-altı kún patshanıń sarayında boladı. Sonnan keyin:
 

@@ -157,28 +157,6 @@
     });
   }
 
-  // Parallax effect for floating stars
-  function initParallax() {
-    const stars = document.querySelectorAll('.floating-star');
-    if (stars.length === 0) return;
-
-    let ticking = false;
-
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          const scrollY = window.scrollY;
-          stars.forEach((star, index) => {
-            const speed = 0.02 + (index * 0.01);
-            const y = scrollY * speed;
-            star.style.transform = `translateY(${y}px)`;
-          });
-          ticking = false;
-        });
-        ticking = true;
-      }
-    });
-  }
 
   // Mobile navigation toggle
   function initMobileNav() {
@@ -268,7 +246,6 @@
     initFilters();
     initSmoothScroll();
     initReadingProgress();
-    initParallax();
     initMobileNav();
     initTouchFeedback();
     initReducedMotion();
