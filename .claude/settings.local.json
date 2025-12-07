@@ -3,7 +3,8 @@
     "allow": [
       "Bash(bundle install:*)",
       "Bash(bundle exec jekyll:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
