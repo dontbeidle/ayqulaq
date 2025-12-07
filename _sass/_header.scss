@@ -88,12 +88,20 @@
   }
 }
 
-// Mobile nav toggle (for future enhancement)
+// Mobile nav toggle
 .nav-toggle {
   display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: $space-xs;
+  color: $color-text;
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
-@media (max-width: 640px) {
+// Tablet
+@media (max-width: 768px) {
   .nav-container {
     padding: $space-sm $space-md;
   }
@@ -102,11 +110,78 @@
     gap: $space-md;
 
     a {
-      font-size: 0.875rem;
+      font-size: 0.9rem;
     }
   }
 
   .logo-text {
+    font-size: 1.35rem;
+  }
+}
+
+// Mobile
+@media (max-width: 480px) {
+  .nav-container {
+    padding: $space-sm;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($color-bg, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $space-lg;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity $transition-base, visibility $transition-base;
+    z-index: 99;
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    a {
+      font-size: 1.25rem;
+      padding: $space-sm;
+    }
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+  }
+
+  .logo-icon {
     font-size: 1.25rem;
+  }
+}
+
+// Close button for mobile menu
+.nav-close {
+  display: none;
+  position: absolute;
+  top: $space-md;
+  right: $space-md;
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  color: $color-text;
+  cursor: pointer;
+  padding: $space-xs;
+
+  @media (max-width: 480px) {
+    .nav-links.is-open & {
+      display: block;
+    }
   }
 }

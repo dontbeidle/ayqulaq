@@ -171,3 +171,108 @@
     transition: transform $transition-fast;
   }
 }
+
+// Tablet responsiveness
+@media (max-width: 768px) {
+  .tales-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: $space-md;
+  }
+
+  .tale-card-image {
+    height: 180px;
+  }
+
+  .tale-card-content {
+    padding: $space-sm $space-md;
+  }
+
+  .tale-card-title {
+    font-size: 1.2rem;
+  }
+
+  .tale-card-excerpt {
+    font-size: 0.9rem;
+  }
+
+  .featured-tales {
+    padding: $space-lg 0;
+  }
+
+  .section-cta {
+    margin-top: $space-lg;
+  }
+}
+
+// Mobile responsiveness
+@media (max-width: 480px) {
+  .tales-grid {
+    grid-template-columns: 1fr;
+    gap: $space-md;
+  }
+
+  .tales-grid-full {
+    grid-template-columns: 1fr;
+  }
+
+  .tale-card {
+    // Disable hover transform on touch devices
+    &:hover {
+      transform: none;
+    }
+
+    // Add active state for touch
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  .tale-card-image {
+    height: 160px;
+  }
+
+  .tale-card-content {
+    padding: $space-sm;
+  }
+
+  .tale-card-title {
+    font-size: 1.15rem;
+  }
+
+  .tale-card-excerpt {
+    font-size: 0.875rem;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .tale-card-meta {
+    font-size: 0.8rem;
+    gap: $space-sm;
+  }
+
+  .tale-icon {
+    font-size: 3rem;
+  }
+
+  .section-title {
+    gap: $space-sm;
+
+    .title-decoration {
+      font-size: 0.85rem;
+    }
+  }
+
+  .featured-tales {
+    padding: $space-md 0;
+  }
+
+  .section-cta {
+    margin-top: $space-md;
+  }
+
+  .view-all-link {
+    padding: $space-sm $space-md;
+  }
+}

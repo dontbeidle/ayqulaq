@@ -229,9 +229,88 @@
   animation-delay: var(--delay);
 }
 
-// Responsive adjustments for small screens
+// Tablet adjustments
+@media (max-width: 768px) {
+  .hero {
+    min-height: 80vh;
+    padding: $space-xl $space-md;
+  }
+
+  .hero-content {
+    max-width: 90%;
+  }
+
+  .hero-decoration {
+    top: 5%;
+    right: 5%;
+  }
+
+  .stars-cluster {
+    width: 180px;
+    height: 140px;
+    top: -20px;
+    left: -30px;
+  }
+
+  .twinkle-star {
+    font-size: 1.25rem;
+  }
+}
+
+// Mobile adjustments
 @media (max-width: 480px) {
+  .hero {
+    min-height: 70vh;
+    padding: $space-lg $space-sm;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding: 0 $space-xs;
+  }
+
+  .hero-title {
+    margin-bottom: $space-md;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: $space-md;
+    padding: 0 $space-xs;
+  }
+
+  .hero-cta {
+    padding: $space-sm $space-md;
+    font-size: 0.95rem;
+  }
+
   .hero-animals {
-    opacity: 0.6;
+    opacity: 0.5;
+  }
+
+  .hero-decoration {
+    top: 3%;
+    right: 3%;
+  }
+
+  .moon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .stars-cluster {
+    width: 120px;
+    height: 100px;
+    top: -15px;
+    left: -20px;
+  }
+
+  .twinkle-star {
+    font-size: 1rem;
+  }
+
+  .floating-star {
+    font-size: 1rem;
+    opacity: 0.2;
   }
 }

@@ -315,3 +315,200 @@
   color: $color-gold;
   margin-bottom: $space-xs;
 }
+
+// Tablet responsiveness
+@media (max-width: 768px) {
+  .tale-single {
+    padding: $space-md 0;
+  }
+
+  .tale-header {
+    margin-bottom: $space-lg;
+  }
+
+  .tale-hero-decoration {
+    margin: $space-lg 0;
+  }
+
+  .decoration-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .decoration-icon {
+    font-size: 2.5rem;
+  }
+
+  .tale-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+
+    p:first-of-type::first-letter {
+      font-size: 3.5rem;
+    }
+
+    blockquote {
+      padding: $space-sm $space-md;
+    }
+  }
+
+  .tale-ending {
+    margin-top: $space-xl;
+    padding-top: $space-lg;
+  }
+
+  .tale-moral {
+    margin: $space-xl 0;
+    padding: $space-md;
+  }
+
+  .moral-text {
+    font-size: 1.05rem;
+  }
+
+  .tale-navigation {
+    margin-top: $space-xl;
+    padding-top: $space-lg;
+  }
+}
+
+// Mobile responsiveness
+@media (max-width: 480px) {
+  .tale-single {
+    padding: $space-sm 0;
+  }
+
+  .tale-header {
+    margin-bottom: $space-md;
+  }
+
+  .tale-header-decoration {
+    margin-bottom: $space-sm;
+
+    .header-star {
+      font-size: 1rem;
+      margin: 0 $space-xs;
+    }
+  }
+
+  .tale-title {
+    font-size: 1.75rem;
+    padding: 0 $space-xs;
+  }
+
+  .tale-subtitle {
+    font-size: 1rem;
+    margin-bottom: $space-sm;
+  }
+
+  .tale-meta {
+    gap: $space-sm;
+
+    .meta-item {
+      font-size: 0.8rem;
+    }
+  }
+
+  .tale-hero-decoration {
+    margin: $space-md 0;
+  }
+
+  .decoration-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .decoration-icon {
+    font-size: 2rem;
+  }
+
+  .tale-content {
+    font-size: 1rem;
+    line-height: 1.75;
+
+    p {
+      text-indent: 1em;
+      margin-bottom: $space-sm;
+    }
+
+    p:first-of-type::first-letter {
+      font-size: 3rem;
+      padding-right: $space-xs;
+    }
+
+    blockquote {
+      margin: $space-md 0;
+      padding: $space-sm;
+    }
+
+    hr {
+      margin: $space-lg 0;
+    }
+  }
+
+  .tale-opening {
+    margin-bottom: $space-md;
+
+    .opening-flourish {
+      font-size: 1.5rem;
+    }
+  }
+
+  .tale-ending {
+    margin-top: $space-lg;
+    padding-top: $space-md;
+
+    .ending-flourish {
+      font-size: 1.25rem;
+    }
+
+    .the-end {
+      font-size: 1.25rem;
+      margin: $space-sm 0;
+    }
+  }
+
+  .tale-moral {
+    margin: $space-lg 0;
+    padding: $space-sm;
+  }
+
+  .moral-title {
+    font-size: 1rem;
+    gap: $space-xs;
+  }
+
+  .moral-text {
+    font-size: 0.95rem;
+  }
+
+  .tale-navigation {
+    margin-top: $space-lg;
+    padding-top: $space-md;
+  }
+
+  .nav-links {
+    gap: $space-xs;
+  }
+
+  .nav-link {
+    padding: $space-sm;
+
+    &.nav-all {
+      order: -1;
+      margin-bottom: $space-sm;
+    }
+  }
+
+  .nav-label {
+    font-size: 0.75rem;
+  }
+
+  .nav-title {
+    font-size: 0.9rem;
+  }
+
+  .nav-icon {
+    font-size: 1.25rem;
+  }
+}

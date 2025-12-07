@@ -180,6 +180,87 @@
     });
   }
 
+  // Mobile navigation toggle
+  function initMobileNav() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navClose = document.querySelector('.nav-close');
+
+    if (!navToggle || !navLinks) return;
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.add('is-open');
+      navToggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    });
+
+    if (navClose) {
+      navClose.addEventListener('click', () => {
+        navLinks.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    }
+
+    // Close menu when clicking a link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('is-open')) {
+        navLinks.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  // Touch feedback for interactive elements
+  function initTouchFeedback() {
+    // Check if device supports touch
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    if (!isTouchDevice) return;
+
+    const interactiveElements = document.querySelectorAll('.tale-card, .hero-cta, .view-all-link, .filter-btn, .nav-link');
+
+    interactiveElements.forEach(el => {
+      el.addEventListener('touchstart', () => {
+        el.style.opacity = '0.8';
+      }, { passive: true });
+
+      el.addEventListener('touchend', () => {
+        el.style.opacity = '';
+      }, { passive: true });
+
+      el.addEventListener('touchcancel', () => {
+        el.style.opacity = '';
+      }, { passive: true });
+    });
+  }
+
+  // Disable animations for users who prefer reduced motion
+  function initReducedMotion() {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    if (prefersReducedMotion.matches) {
+      document.documentElement.style.setProperty('--transition-fast', '0s');
+      document.documentElement.style.setProperty('--transition-base', '0s');
+      document.documentElement.style.setProperty('--transition-slow', '0s');
+
+      // Remove animations from animated elements
+      document.querySelectorAll('[data-animate]').forEach(el => {
+        el.classList.add('is-visible');
+        el.style.animation = 'none';
+      });
+    }
+  }
+
   // Initialize all on DOM ready
   document.addEventListener('DOMContentLoaded', () => {
     initAnimations();
@@ -188,6 +269,9 @@
     initSmoothScroll();
     initReadingProgress();
     initParallax();
+    initMobileNav();
+    initTouchFeedback();
+    initReducedMotion();
   });
 
 })();
