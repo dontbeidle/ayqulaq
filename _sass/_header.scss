@@ -37,9 +37,14 @@
 }
 
 .logo-icon {
-  font-size: 1.5rem;
-  color: $color-gold;
+  display: flex;
+  align-items: center;
   transition: transform $transition-base;
+
+  svg {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 .logo-text {
