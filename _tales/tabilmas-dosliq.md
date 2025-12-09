@@ -1,5 +1,6 @@
 ---
 title: "Tabılmas doslıq"
+author: "Qaraqalpaq folklorı"
 subtitle: "Jaqsı dos, is túskende biliner"
 icon: "&#9789;"
 category: "Doslıq"

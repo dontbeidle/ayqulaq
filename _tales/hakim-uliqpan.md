@@ -1,5 +1,6 @@
 ---
 title: "Hákim-Ulıqpan"
+author: "Qaraqalpaq folklorı"
 subtitle: "Xalıqına is kórsetken márt ólmeydi, tarıyxqa jazıp ketken xat ólmeydi."
 icon: "&#128214;"
 category: "Bilim"

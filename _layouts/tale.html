@@ -36,6 +36,12 @@ layout: default
       </span>
       {% endif %}
     </div>
+
+    {% assign tale_author = page.author | default: "Qaraqalpaq xalıq awızeki dóretpesi" %}
+    <p class="tale-author">
+      <span class="author-label">{{ site.data.translations.tale.author_prefix }}</span>
+      {{ tale_author }}
+    </p>
   </header>
 
   {% if page.image %}

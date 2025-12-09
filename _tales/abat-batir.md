@@ -1,5 +1,6 @@
 ---
 title: "Abat batır"
+author: "Qaraqalpaq folklorı"
 subtitle: "Jolǵa shıqsań, joldasıńdı tawıp shıq"
 icon: "&#9876;"
 category: "Doslıq"

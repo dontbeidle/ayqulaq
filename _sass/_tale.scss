@@ -67,6 +67,19 @@
   }
 }
 
+.tale-author {
+  margin-top: $space-md;
+  font-family: $font-display;
+  font-size: 1rem;
+  font-style: italic;
+  color: $color-text-muted;
+
+  .author-label {
+    color: $color-text-light;
+    margin-right: 0.25em;
+  }
+}
+
 // Tale Hero Image/Decoration
 .tale-hero-image {
   margin: $space-xl 0;
