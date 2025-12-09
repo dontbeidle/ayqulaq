@@ -1,7 +1,7 @@
 ---
 title: "Hákim-Ulıqpan"
 subtitle: "Xalıqına is kórsetken márt ólmeydi, tarıyxqa jazıp ketken xat ólmeydi."
-icon: "&#128366;"
+icon: "&#128214;"
 category: "Bilim"
 reading_time: "6 min"
 age_range: "4-8"
