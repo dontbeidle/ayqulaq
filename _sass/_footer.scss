@@ -37,6 +37,26 @@
   margin-bottom: $space-xs;
 }
 
+.footer-legal {
+  margin: $space-md 0;
+
+  a {
+    color: $color-text-muted;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  .footer-divider {
+    color: $color-border;
+    margin: 0 $space-sm;
+  }
+}
+
 .footer-copyright {
   font-size: 0.85rem;
   color: $color-text-muted;

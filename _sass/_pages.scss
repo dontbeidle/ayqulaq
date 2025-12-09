@@ -192,3 +192,79 @@
     transition: transform $transition-fast;
   }
 }
+
+// Legal pages (Privacy Policy, Terms, Children's Privacy)
+.legal-page {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: $space-lg 0;
+}
+
+.legal-body {
+  font-family: $font-body;
+  font-size: 1rem;
+  line-height: 1.8;
+
+  h2 {
+    font-family: $font-display;
+    margin-top: $space-xl;
+    margin-bottom: $space-md;
+    font-size: 1.5rem;
+    color: $color-text;
+  }
+
+  p {
+    margin-bottom: $space-md;
+  }
+
+  ul, ol {
+    margin: $space-md 0;
+    padding-left: $space-lg;
+
+    li {
+      margin-bottom: $space-sm;
+
+      strong {
+        color: $color-accent-dark;
+      }
+    }
+  }
+
+  a {
+    color: $color-accent-dark;
+    text-decoration: underline;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
+
+.legal-section {
+  margin-bottom: $space-xl;
+}
+
+.legal-language-label {
+  display: inline-block;
+  font-family: $font-display;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: $color-accent;
+  background: $color-accent-light;
+  padding: $space-xs $space-md;
+  border-radius: $radius-full;
+  margin-bottom: $space-lg;
+}
+
+.legal-divider {
+  border: none;
+  margin: $space-2xl 0;
+  text-align: center;
+
+  &::before {
+    content: '\2726 \2726 \2726';
+    color: $color-accent-light;
+    letter-spacing: $space-sm;
+  }
+}

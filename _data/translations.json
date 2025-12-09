@@ -59,7 +59,21 @@
     "closing": "Hár bir ertek jaqsılıq ushın."
   },
   "footer": {
-    "copyright_prefix": ""
+    "copyright_prefix": "",
+    "privacy_policy": "Privacy Policy",
+    "terms_of_service": "Terms of Service",
+    "childrens_privacy": "Childrens Privacy"
+  },
+  "legal": {
+    "privacy_policy": {
+      "title": "Privacy Policy | Qupiyalıq Siyasatı"
+    },
+    "terms_of_service": {
+      "title": "Terms of Service | Paydalanıw shártlerі"
+    },
+    "childrens_privacy": {
+      "title": "Children's Privacy Policy | Balalar Qupiyalıq Siyasatı"
+    }
   },
   "meta": {
     "default_reading_time": "5 minut oqıw"

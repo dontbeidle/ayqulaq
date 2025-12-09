@@ -6,6 +6,13 @@
       <span class="star star-3">&#10022;</span>
     </div>
     <p class="footer-text">{{ site.data.translations.site.title }} &mdash; {{ site.data.translations.site.tagline }}</p>
+    <nav class="footer-legal">
+      <a href="{{ '/privacy-policy/' | relative_url }}">{{ site.data.translations.footer.privacy_policy }}</a>
+      <span class="footer-divider">&middot;</span>
+      <a href="{{ '/terms-of-service/' | relative_url }}">{{ site.data.translations.footer.terms_of_service }}</a>
+      <span class="footer-divider">&middot;</span>
+      <a href="{{ '/childrens-privacy/' | relative_url }}">{{ site.data.translations.footer.childrens_privacy }}</a>
+    </nav>
     <p class="footer-copyright">{{ site.data.translations.footer.copyright_prefix }}&copy; {{ 'now' | date: "%Y" }}</p>
   </div>
 </footer>
