@@ -1,3 +1,4 @@
+@use "variables" as *;
 
 // Header & Navigation
 
@@ -51,15 +52,22 @@
 
 .nav-links {
   display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
   list-style: none;
-  gap: $space-lg;
+  gap: $space-sm;
 
   li {
     position: relative;
   }
 
+  > .nav-close {
+    display: none;
+  }
+
   a {
     font-size: 0.95rem;
+    white-space: nowrap;
     font-weight: 500;
     color: $color-text-light;
     text-decoration: none;
@@ -107,10 +115,10 @@
   }
 
   .nav-links {
-    gap: $space-md;
+    gap: $space-xs;
 
     a {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
   }
 
@@ -166,9 +174,9 @@
   }
 }
 
-// Close button for mobile menu
+// Close button for mobile menu — hidden on desktop, visible only in mobile overlay
 .nav-close {
-  display: none;
+  display: none !important;
   position: absolute;
   top: $space-md;
   right: $space-md;
@@ -181,7 +189,7 @@
 
   @media (max-width: 480px) {
     .nav-links.is-open & {
-      display: block;
+      display: block !important;
     }
   }
 }

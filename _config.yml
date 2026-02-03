@@ -12,6 +12,9 @@ collections:
   tales:
     output: true
     permalink: /tales/:title/
+  poems:
+    output: true
+    permalink: /poems/:title/
 
 # Default front matter
 defaults:
@@ -20,6 +23,11 @@ defaults:
       type: "tales"
     values:
       layout: "tale"
+  - scope:
+      path: ""
+      type: "poems"
+    values:
+      layout: "poem"
 
 # Plugins
 plugins:

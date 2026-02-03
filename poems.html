@@ -1,0 +1,48 @@
+---
+layout: default
+title: Qosıqlar
+permalink: /poems/
+---
+
+<section class="poems-page">
+  <header class="page-header" data-animate>
+    <div class="poems-header-ornament">
+      <span class="ornament-note">&#9835;</span>
+      <span class="ornament-dot"></span>
+      <span class="ornament-note">&#9833;</span>
+      <span class="ornament-dot"></span>
+      <span class="ornament-note">&#9835;</span>
+    </div>
+    <h1 class="page-title">{{ site.data.translations.poems.page_title }}</h1>
+    <p class="page-subtitle">{{ site.data.translations.poems.page_subtitle }}</p>
+  </header>
+
+  <div class="poems-grid" data-animate>
+    {% for poem in site.poems %}
+      <article class="poem-card" data-category="{{ poem.category | slugify }}">
+        <a href="{{ poem.url | relative_url }}" class="poem-card-link">
+          <div class="poem-card-icon">
+            <span>{{ poem.icon | default: "&#9834;" }}</span>
+          </div>
+          <div class="poem-card-content">
+            <h3 class="poem-card-title">{{ poem.title }}</h3>
+            {% if poem.author %}
+            <p class="poem-card-author">{{ poem.author }}</p>
+            {% endif %}
+          </div>
+          <div class="poem-card-arrow">
+            <span>&rarr;</span>
+          </div>
+        </a>
+      </article>
+    {% endfor %}
+  </div>
+
+  {% if site.poems.size == 0 %}
+  <div class="empty-state" data-animate>
+    <span class="empty-icon">&#9835;</span>
+    <p>{{ site.data.translations.poems.empty_state_message }}</p>
+    <p class="empty-hint">{{ site.data.translations.poems.empty_state_hint }}</p>
+  </div>
+  {% endif %}
+</section>

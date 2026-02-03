@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 // Reset & Base Styles
 *, *::before, *::after {
   box-sizing: border-box;
@@ -81,6 +83,27 @@ img {
   max-width: $max-width;
   margin: 0 auto;
   padding: 0 $space-md;
+}
+
+// Spoiler text (Telegram-style)
+spoiler {
+  background: linear-gradient(135deg, $color-accent-light, $color-moon, $color-accent-light);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+  color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background $transition-slow, color $transition-slow, filter $transition-slow;
+  padding: 1px 4px;
+  user-select: none;
+
+  &.is-revealed {
+    background: rgba($color-accent-light, 0.2);
+    background-size: 100% 100%;
+    animation: none;
+    color: $color-accent-dark;
+    font-weight: 600;
+  }
 }
 
 // Screen reader only

@@ -1,19 +1,17 @@
 ---
 ---
 
-// Variables (must be imported first)
-@import "variables";
-
 // Base styles
-@import "base";
+@use "base";
 
 // Animations
-@import "animations";
+@use "animations";
 
 // Components
-@import "header";
-@import "footer";
-@import "hero";
-@import "cards";
-@import "tale";
-@import "pages";
+@use "header";
+@use "footer";
+@use "hero";
+@use "cards";
+@use "tale";
+@use "poem";
+@use "pages";

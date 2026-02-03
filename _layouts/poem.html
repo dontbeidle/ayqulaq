@@ -1,0 +1,74 @@
+---
+layout: default
+---
+
+<article class="poem-single">
+  <header class="poem-header" data-animate>
+    <div class="poem-header-ornament">
+      <span class="ornament-note">&#9835;</span>
+      <span class="ornament-dot"></span>
+      <span class="ornament-note">&#9833;</span>
+    </div>
+
+    <h1 class="poem-title">{{ page.title }}</h1>
+
+    {% assign poem_author = page.author %}
+    {% if poem_author %}
+    <p class="poem-author">{{ poem_author }}</p>
+    {% endif %}
+  </header>
+
+  <div class="poem-body" data-animate>
+    <div class="poem-verse-container">
+      {{ content }}
+    </div>
+  </div>
+
+  <footer class="poem-footer" data-animate>
+    <div class="poem-end-ornament">
+      <span class="end-leaf">&#10045;</span>
+    </div>
+  </footer>
+
+  <nav class="poem-navigation" data-animate>
+    {% assign poems = site.poems | sort: "date" %}
+    {% assign poem_index = 0 %}
+    {% for p in poems %}
+      {% if p.url == page.url %}
+        {% assign poem_index = forloop.index0 %}
+      {% endif %}
+    {% endfor %}
+
+    {% assign prev_index = poem_index | minus: 1 %}
+    {% assign next_index = poem_index | plus: 1 %}
+
+    <div class="poem-nav-links">
+      {% if prev_index >= 0 %}
+        {% assign prev_poem = poems[prev_index] %}
+        <a href="{{ prev_poem.url | relative_url }}" class="poem-nav-link poem-nav-prev">
+          <span class="poem-nav-arrow">&larr;</span>
+          <span class="poem-nav-label">{{ site.data.translations.poem.nav_previous }}</span>
+          <span class="poem-nav-title">{{ prev_poem.title }}</span>
+        </a>
+      {% else %}
+        <div class="poem-nav-link poem-nav-placeholder"></div>
+      {% endif %}
+
+      <a href="{{ '/poems/' | relative_url }}" class="poem-nav-link poem-nav-all">
+        <span class="poem-nav-icon">&#9835;</span>
+        <span class="poem-nav-label">{{ site.data.translations.poem.nav_all_poems }}</span>
+      </a>
+
+      {% if next_index < poems.size %}
+        {% assign next_poem = poems[next_index] %}
+        <a href="{{ next_poem.url | relative_url }}" class="poem-nav-link poem-nav-next">
+          <span class="poem-nav-label">{{ site.data.translations.poem.nav_next }}</span>
+          <span class="poem-nav-title">{{ next_poem.title }}</span>
+          <span class="poem-nav-arrow">&rarr;</span>
+        </a>
+      {% else %}
+        <div class="poem-nav-link poem-nav-placeholder"></div>
+      {% endif %}
+    </div>
+  </nav>
+</article>

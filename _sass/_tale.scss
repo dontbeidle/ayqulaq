@@ -1,3 +1,4 @@
+@use "variables" as *;
 
 // Single Tale Page
 
@@ -261,7 +262,7 @@
   border-top: 1px solid $color-border;
 }
 
-.nav-links {
+.tale-navigation .nav-links {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   gap: $space-md;

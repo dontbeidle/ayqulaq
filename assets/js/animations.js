@@ -19,7 +19,7 @@
         entry.target.classList.add('is-visible');
 
         // Stagger children if present
-        const children = entry.target.querySelectorAll('.tale-card');
+        const children = entry.target.querySelectorAll('.tale-card, .poem-card');
         children.forEach((child, index) => {
           child.style.transitionDelay = `${index * 0.1}s`;
           child.classList.add('is-visible');
@@ -205,7 +205,7 @@
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     if (!isTouchDevice) return;
 
-    const interactiveElements = document.querySelectorAll('.tale-card, .hero-cta, .view-all-link, .filter-btn, .nav-link');
+    const interactiveElements = document.querySelectorAll('.tale-card, .poem-card, .hero-cta, .view-all-link, .filter-btn, .nav-link');
 
     interactiveElements.forEach(el => {
       el.addEventListener('touchstart', () => {
@@ -239,6 +239,15 @@
     }
   }
 
+  // Spoiler text toggle
+  function initSpoilers() {
+    document.querySelectorAll('spoiler').forEach(el => {
+      el.addEventListener('click', () => {
+        el.classList.toggle('is-revealed');
+      });
+    });
+  }
+
   // Initialize all on DOM ready
   document.addEventListener('DOMContentLoaded', () => {
     initAnimations();
@@ -249,6 +258,7 @@
     initMobileNav();
     initTouchFeedback();
     initReducedMotion();
+    initSpoilers();
   });
 
 })();

@@ -1,0 +1,419 @@
+@use "variables" as *;
+
+// Poetry Section — Lyrical, centered, breathing layout
+
+// =============================================
+// Poems Listing Page
+// =============================================
+
+.poems-page {
+  padding: $space-lg 0;
+}
+
+.poems-header-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-sm;
+  margin-bottom: $space-md;
+
+  .ornament-note {
+    font-size: 1.5rem;
+    color: $color-gold;
+    animation: float 4s ease-in-out infinite;
+
+    &:nth-child(1) { animation-delay: 0s; }
+    &:nth-child(3) { animation-delay: 0.6s; }
+    &:nth-child(5) { animation-delay: 1.2s; }
+  }
+
+  .ornament-dot {
+    width: 4px;
+    height: 4px;
+    background: $color-accent-light;
+    border-radius: 50%;
+  }
+}
+
+// Poem cards — horizontal list items, not grid cards
+.poems-grid {
+  max-width: 640px;
+  margin: $space-lg auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: $color-border;
+  border-radius: $radius-lg;
+  overflow: hidden;
+}
+
+.poem-card {
+  background: white;
+  transition: background $transition-fast;
+
+  &:hover {
+    background: $color-bg-alt;
+
+    .poem-card-icon span {
+      transform: scale(1.15) rotate(-5deg);
+    }
+
+    .poem-card-arrow span {
+      transform: translateX(4px);
+      color: $color-accent;
+    }
+
+    .poem-card-title {
+      color: $color-accent-dark;
+    }
+  }
+}
+
+.poem-card-link {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+  padding: $space-md $space-lg;
+  text-decoration: none;
+  color: inherit;
+}
+
+.poem-card-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba($color-moon, 0.5), rgba($color-accent-light, 0.3));
+  border-radius: 50%;
+
+  span {
+    font-size: 1.35rem;
+    color: $color-gold;
+    transition: transform $transition-base;
+  }
+}
+
+.poem-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.poem-card-title {
+  font-family: $font-display;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+  transition: color $transition-fast;
+}
+
+.poem-card-author {
+  font-size: 0.85rem;
+  color: $color-text-muted;
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.poem-card-preview {
+  font-size: 0.875rem;
+  color: $color-text-light;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.poem-card-arrow {
+  flex-shrink: 0;
+
+  span {
+    display: block;
+    font-size: 1.1rem;
+    color: $color-text-muted;
+    transition: transform $transition-fast, color $transition-fast;
+  }
+}
+
+// =============================================
+// Single Poem Page
+// =============================================
+
+.poem-single {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: $space-lg 0 $space-xl;
+}
+
+// Header
+.poem-header {
+  text-align: center;
+  margin-bottom: $space-xl;
+}
+
+.poem-header-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-sm;
+  margin-bottom: $space-md;
+
+  .ornament-note {
+    font-size: 1.25rem;
+    color: $color-gold;
+    animation: float 4s ease-in-out infinite;
+
+    &:last-of-type {
+      animation-delay: 0.8s;
+    }
+  }
+
+  .ornament-dot {
+    width: 4px;
+    height: 4px;
+    background: $color-accent-light;
+    border-radius: 50%;
+  }
+}
+
+.poem-title {
+  font-family: $font-display;
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: $space-sm;
+}
+
+.poem-author {
+  font-family: $font-display;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: $color-text-muted;
+}
+
+// Poem Body — The heart of the design
+.poem-body {
+  margin-bottom: $space-xl;
+}
+
+.poem-verse-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $font-display;
+  font-size: clamp(1.05rem, 2.5vw, 1.2rem);
+  line-height: 1.85;
+  color: $color-text;
+
+  // Each <p> is a stanza — left-aligned text, centered as a block
+  p {
+    text-align: left;
+    margin-bottom: $space-xl;
+    text-indent: 0;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Footer ornament
+.poem-footer {
+  text-align: center;
+  margin-bottom: $space-lg;
+}
+
+.poem-end-ornament {
+  .end-leaf {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: $color-accent-light;
+    animation: pulse 3s ease infinite;
+  }
+}
+
+// Navigation
+.poem-navigation {
+  margin-top: $space-xl;
+  padding-top: $space-xl;
+  border-top: 1px solid $color-border;
+}
+
+.poem-nav-links {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: $space-md;
+  align-items: start;
+}
+
+.poem-nav-link {
+  display: flex;
+  flex-direction: column;
+  padding: $space-md;
+  border-radius: $radius-md;
+  text-decoration: none;
+  transition: background $transition-fast;
+
+  &:hover {
+    background: $color-bg-alt;
+  }
+
+  &.poem-nav-prev {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  &.poem-nav-next {
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  &.poem-nav-all {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &.poem-nav-placeholder {
+    visibility: hidden;
+  }
+}
+
+.poem-nav-arrow {
+  font-size: 1.25rem;
+  color: $color-accent;
+}
+
+.poem-nav-label {
+  font-size: 0.85rem;
+  color: $color-text-muted;
+  margin-bottom: 2px;
+}
+
+.poem-nav-title {
+  font-family: $font-display;
+  font-size: 1rem;
+  color: $color-text;
+}
+
+.poem-nav-icon {
+  font-size: 1.5rem;
+  color: $color-gold;
+  margin-bottom: $space-xs;
+}
+
+// =============================================
+// Responsive
+// =============================================
+
+@media (max-width: 768px) {
+  .poem-single {
+    padding: $space-md 0;
+  }
+
+  .poem-header {
+    margin-bottom: $space-lg;
+  }
+
+  .poem-verse-container p {
+    margin-bottom: $space-lg;
+  }
+
+  .poem-navigation {
+    margin-top: $space-lg;
+    padding-top: $space-lg;
+  }
+
+  .poems-grid {
+    margin-left: -$space-md;
+    margin-right: -$space-md;
+    border-radius: 0;
+  }
+
+  .poem-card-link {
+    padding: $space-sm $space-md;
+  }
+}
+
+@media (max-width: 480px) {
+  .poem-single {
+    padding: $space-sm 0;
+  }
+
+  .poem-header {
+    margin-bottom: $space-md;
+  }
+
+  .poem-header-ornament .ornament-note {
+    font-size: 1rem;
+  }
+
+  .poem-title {
+    font-size: 1.5rem;
+  }
+
+  .poem-author {
+    font-size: 0.95rem;
+  }
+
+  .poem-verse-container {
+    font-size: 1rem;
+    line-height: 1.75;
+
+    p {
+      margin-bottom: $space-lg;
+    }
+  }
+
+  .poem-end-ornament .end-leaf {
+    font-size: 1.25rem;
+  }
+
+  .poem-nav-links {
+    grid-template-columns: 1fr;
+    gap: $space-xs;
+  }
+
+  .poem-nav-link {
+    padding: $space-sm;
+
+    &.poem-nav-all {
+      order: -1;
+      margin-bottom: $space-sm;
+    }
+  }
+
+  .poem-nav-label {
+    font-size: 0.75rem;
+  }
+
+  .poem-nav-title {
+    font-size: 0.9rem;
+  }
+
+  .poems-header-ornament .ornament-note {
+    font-size: 1.15rem;
+  }
+
+  .poem-card-link {
+    gap: $space-sm;
+    padding: $space-sm;
+  }
+
+  .poem-card-icon {
+    width: 40px;
+    height: 40px;
+
+    span {
+      font-size: 1.1rem;
+    }
+  }
+
+  .poem-card-title {
+    font-size: 1.05rem;
+  }
+
+  .poem-card-preview {
+    font-size: 0.8rem;
+  }
+}
