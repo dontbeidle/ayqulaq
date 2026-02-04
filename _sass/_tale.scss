@@ -39,6 +39,15 @@
   font-weight: 600;
   margin-bottom: $space-sm;
   line-height: 1.2;
+
+  subtitle {
+    display: block;
+    font-size: 0.5em;
+    font-weight: 400;
+    font-style: italic;
+    color: $color-text-light;
+    margin-top: 0.2em;
+  }
 }
 
 .tale-subtitle {
@@ -322,6 +331,14 @@
   font-family: $font-display;
   font-size: 1rem;
   color: $color-text;
+
+  subtitle {
+    display: block;
+    font-size: 0.8em;
+    font-weight: 400;
+    font-style: italic;
+    color: $color-text-muted;
+  }
 }
 
 .nav-icon {

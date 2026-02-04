@@ -2,7 +2,7 @@
 title: "Muratino"
 author: "Allayar Darmenov"
 icon: "&#9834;"
-category: "Házil"
+category: "Tárbiya"
 ---
 
 Biziń Murat bilgish dá,\

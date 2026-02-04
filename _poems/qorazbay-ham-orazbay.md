@@ -2,7 +2,7 @@
 title: "Qorazbay hám Orazbay"
 author: "Allayar Darmenov"
 icon: "&#128019;"
-category: "Házil"
+category: "Tárbiya"
 ---
 
 Jaqsı bala Orazbay,\

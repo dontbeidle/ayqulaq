@@ -1,5 +1,5 @@
 ---
-title: "Apası menen aqılıǵı: Soraw-juwap"
+title: "Soraw-juwap <subtitle>(Apası menen aqılıǵı)</subtitle>"
 author: "Allayar Darmenov"
 icon: "&#10068;"
 category: "Soraw-juwap"
